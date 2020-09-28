@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-      <nav>
-        <a>
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-nav">
+        <a class="logo  main-nav__logo">
           <img src="https://via.placeholder.com/163x35" width="163" height="35"
                alt="Логотип интернет-магазина &#171;Девайс&#187;">
         </a>
-        <!--Здесь будет форма с поиском-->
-        <ul>
+        <ul class="main-nav__user-list  user-list">
+          <li>
+            <!--Здесь будет форма с поиском-->
+          </li>
           <li>
             <a href="#">Войти</a>
           </li>
@@ -23,7 +27,7 @@
             <a href="#">Корзина</a>
           </li>
         </ul>
-        <ul>
+        <ul class="main-nav__company-list  company-list">
           <li>
             <a href="catalog.html">Каталог товаров</a>
           </li>
@@ -39,22 +43,22 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Интернет-магазин &#171;Девайс&#187;</h1>
-      <section>
-        <h2>Промо-слайдер</h2>
-        <div>
+    <main class="main-content">
+      <h1 class="main-content__title  visually-hidden">Интернет-магазин &#171;Девайс&#187;</h1>
+      <section class="promo-slider">
+        <h2 class="promo-slider__title  visually-hidden">Промо-слайдер</h2>
+        <div class="promo-slider__item  promo-slider__item--1">
           <img src="https://via.placeholder.com/384x496" width="384" height="496" alt="Изображение селфи-палки">
-          <span>01</span>
-          <p>
+          <span class="promo-slider__number">01</span>
+          <p class="promo-slider__text-title">
             Делай селфи, как Бен Стиллер!
           </p>
-          <p>
+          <p class="promo-slider__text">
             Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <a href="#">Подробнее</a>
-          <table>
+          <a class="promo-slider__more" href="#">Подробнее</a>
+          <table class="promo-slider__table  promo-slider__table--1">
             <tr>
               <th>8.5 м</th>
               <th>5 кг</th>
@@ -68,20 +72,20 @@
           </table>
         </div>
         <!--Тут будет ещё два слайда с похожей структурой-->
-        <p>
+        <p class="promo-slider__input">
           <input type="radio" id="slider-btn-1" name="slider-btn" checked>
           <input type="radio" id="slider-btn-2" name="slider-btn">
           <input type="radio" id="slider-btn-3" name="slider-btn">
         </p>
-        <p>
+        <p class="promo-slider__controls">
           <label for="slider-btn-1"></label>
           <label for="slider-btn-2"></label>
           <label for="slider-btn-3"></label>
         </p>
       </section>
-      <section>
-        <h2>Категории товаров</h2>
-        <ul>
+      <section class="product-categories">
+        <h2 class="product-categories__title visually-hidden">Категории товаров</h2>
+        <ul class="product-categories__list">
           <li>
             <a href="catalog.html">Виртуальная реальность</a>
           </li>
@@ -102,26 +106,31 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Сервисы</h2>
-        <ul>
-          <li>Доставка</li>
-          <li>Гарантии</li>
-          <li>Кредит</li>
-        </ul>
-        <section>
-          <h3>Доставка</h3>
-          <p>
+      <section class="services-slider">
+        <h2 class="services-slider__title  visually-hidden">Сервисы</h2>
+        <p class="services-slider__input">
+          <input type="radio" id="services-btn-1" name="services-control" checked>
+          <input type="radio" id="services-btn-2" name="services-control">
+          <input type="radio" id="services-btn-3" name="services-control">
+        </p>
+        <p class="services-slider__controls">
+          <label for="services-btn-1">Доставка</label>
+          <label for="services-btn-2">Гарантия</label>
+          <label for="services-btn-3">Кредит</label>
+        </p>
+        <div class="services-slider__item">
+          <h3 class="services-slider__item-title">Доставка</h3>
+          <p class="services-slider__item-text">
             Мы с удовольствием доставим ваш товар прямо к вашему
             подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем, поднимая его на ваш этаж.
           </p>
-        </section>
+        </div>
         <!--Здесь будет ещё два раздела c такой же структурой: гарантии и кредит-->
       </section>
-      <section>
-        <h2>Логотипы</h2>
-        <ul>
+      <section class="contribution">
+        <h2 class="contribution__title  visually-hidden">Логотипы</h2>
+        <ul class="contribution__list">
           <li>
             <img src="https://via.placeholder.com/260x100" width="260" height="100" alt="Логотип">
           </li>
@@ -136,17 +145,17 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2>О нас</h2>
-        <p>
+      <section class="contacts">
+        <h2 class="contacts__title">О нас</h2>
+        <p class="contacts__text">
           Огромный выбор гаджетов не оставит равнодушным гика,
           который есть в каждом из нас.
         </p>
-        <p>
+        <p class="contacts__text">
           Мы можем доставить ваш товар в самые отдаленные точки
           России! DEVICE работает со многими транспортными компаниями:
         </p>
-        <ul>
+        <ul class="contacts__delivery-list">
           <li>
             <a href="https://www.dellin.ru/">Деловые линии</a>
           </li>
@@ -157,33 +166,33 @@
             <a href="https://www.jde.ru/">ЖелДорЭкспедиция</a>
           </li>
         </ul>
-        <a href="#">Подробнее о нас</a>
+        <a class="contacts__more" href="#">Подробнее о нас</a>
       </section>
-      <section>
-        <h2>Контакты</h2>
-        <p>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__text">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.
         </p>
         <iframe width="560" height="222">
         </iframe>
-          <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11">
-            <img src="https://via.placeholder.com/260x222" width="560" height="222"
-                 alt="Карта с адресом магазина: ул. Строителей, 15">
-          </a>
-        <a href="#">Напишите нам</a>
+        <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11">
+          <img src="https://via.placeholder.com/260x222" width="560" height="222"
+               alt="Карта с адресом магазина: ул. Строителей, 15">
+        </a>
+        <a class="contacts__mail-to" href="#">Напишите нам</a>
       </section>
     </main>
-    <footer>
-      <section>
-        <h2>Как нас найти</h2>
-        <a>
+    <footer class="main-footer">
+      <section class="find-us">
+        <h2 class="find-us__title  visually-hidden">Как нас найти</h2>
+        <a class="find-us__logo">
           <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип инетрнет магазина">
         </a>
-        <address id="contacts">г. Москва, ул. Строителей, 15</address>
+        <address class="find-us__text" id="contacts">г. Москва, ул. Строителей, 15</address>
       </section>
-      <nav>
-        <ul>
+      <nav class="footer-nav-company">
+        <ul class="footer-nav-company__company-list  company-list">
           <li>
             <a href="#">Доставка</a>
           </li>
@@ -195,22 +204,22 @@
           </li>
         </ul>
       </nav>
-      <section>
-        <h2>Мы в социальных сетях</h2>
-        <ul>
+      <section class="social">
+        <h2 class="social__title  visually-hidden">Мы в социальных сетях</h2>
+        <ul class="social__list">
           <li>
-            <a href="#">Фейсбук</a>
+            <a class="visually-hidden" href="#">Фейсбук</a>
           </li>
           <li>
-            <a href="#">Инстаграм</a>
+            <a class="visually-hidden" href="#">Инстаграм</a>
           </li>
           <li>
-            <a href="#">Твиттер</a>
+            <a class="visually-hidden" href="#">Твиттер</a>
           </li>
         </ul>
       </section>
-      <nav>
-        <ul>
+      <nav class="footer-nav-user">
+        <ul class="footer-nav-user__user-list  user-list">
           <li>
             <a href="#">Войти</a>
           </li>
@@ -222,7 +231,7 @@
           </li>
         </ul>
       </nav>
-      <p>
+      <p class="footer-contacts">
         <a href="tel:+74954959595">+7 (495) 495-95-95</a>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="HTML Academy">
