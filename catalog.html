@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Catalog</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <nav>
-      <a>
+<body class="page-body">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="main-nav__logo  logo">
         <img src="https://via.placeholder.com/163x35" width="163" height="35"
              alt="Логотип интернет-магазина &#171;Девайс&#187;">
       </a>
-      <!--Здесь будет форма с поиском-->
-      <ul>
+      <ul class="main-nav__user-list  user-list  user-list--catalog-view">
+        <li>
+          <!--Здесь будет форма с поиском-->
+        </li>
         <li>
           <a href="#">Валентин Петухов</a>
         </li>
@@ -26,7 +30,7 @@
           <a href="#">Корзина</a>
         </li>
       </ul>
-      <ul>
+      <ul class="main-nav__company-list  company-list">
         <li>
           <a href="catalog.html">Каталог товаров</a>
         </li>
@@ -42,9 +46,9 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Моноподы для селфи</h1>
-    <ul>
+  <main class="main-content">
+    <h1 class="page-title">Моноподы для селфи</h1>
+    <ul class="breadcrumbs">
       <li>
         <a href="index.html">Главная</a>
       </li>
@@ -53,88 +57,88 @@
       </li>
       <li>Моноподы для селфи</li>
     </ul>
-    <section>
+    <section class="filter">
       <h2>Фильтр</h2>
      <!--Здесь будет форма фильтра-->
     </section>
-    <section>
-      <h2>Сортировка</h2>
-      <ul>
-        <li>
+    <section class="sort">
+      <h2 class="sort__title">Сортировка:</h2>
+      <ul class="sort__list">
+        <li class="sort__item  sort__item--active">
           <a>По цене</a>
         </li>
-        <li>
-          <a href="">По типу</a>
+        <li class="sort__item">
+          <a href="#">По типу</a>
         </li>
-        <li>
+        <li class="sort__item">
           <a href="#">По популярности</a>
         </li>
       </ul>
-      <p>
+      <p class="sort__buttons">
         <button type="button" disabled>Сортировка по возрастанию</button>
         <button type="button">Сортировка по убыванию</button>
       </p>
     </section>
-    <section>
-      <h2>Список моноподов</h2>
-      <ul>
-        <li>
+    <section class="mono-pods">
+      <h2 class="mono-pods__title  visually-hidden">Список моноподов</h2>
+      <ul class="mono-pods__list">
+        <li class="mono-pods__item">
           <p>
             <img src="https://via.placeholder.com/360x380" width="360" height="380"
                  alt="Фото любительской селфи-палки">
           </p>
-          <p>
-            <button type="button">Добавить в корзину</button>
+          <p class="mono-pods__buttons">
+            <button class="button" type="button">в корзину</button>
             <button type="button">Добавить к сравнению</button>
           </p>
-          <p>
+          <p class="mono-pods__text">
             <a href="#">Любительская селфи-палка <span>500 руб.</span></a>
           </p>
         </li>
-        <li>
+        <li class="mono-pods__item">
           <p>
             <img src="https://via.placeholder.com/360x380" width="360" height="380"
                  alt="Фото профессиональной селфи-палки">
           </p>
-          <p>
-            <button type="button">Добавить в корзину</button>
+          <p class="mono-pods__buttons">
+            <button class="button" type="button">в корзину</button>
             <button type="button">Добавить к сравнению</button>
           </p>
-          <p>
+          <p class="mono-pods__text">
             <a href="#">Профессиональная селфи-палка<span>1 500 руб.</span></a>
           </p>
         </li>
-        <li>
+        <li class="mono-pods__item">
           <p>
             <img src="https://via.placeholder.com/360x380" width="360" height="380"
                  alt="Фото непотопляемой селфи-палки">
           </p>
-          <p>
-            <button type="button">Добавить в корзину</button>
+          <p class="mono-pods__buttons">
+            <button class="button" type="button">в корзину</button>
             <button type="button">Добавить к сравнению</button>
           </p>
-          <p>
+          <p class="mono-pods__text">
             <a href="#">Непотомляемая селфи-палка <span>2 500 руб.</span></a>
           </p>
         </li>
-        <li>
+        <li class="mono-pods__item">
           <p>
             <img src="https://via.placeholder.com/360x380" width="360" height="380"
                  alt="Фото селфи-палки &#171;Следуй за мной&#187;">
           </p>
-          <p>
-            <button type="button">Добавить в корзину</button>
+          <p class="mono-pods__buttons">
+            <button class="button" type="button">в корзину</button>
             <button type="button">Добавить к сравнению</button>
           </p>
-          <p>
+          <p class="mono-pods__text">
             <a href="#">Селфи-палка &#171;Следуй за мной&#187;<span>4 900 руб.</span></a>
           </p>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="pagination">
       <a>Назад</a>
-      <ul>
+      <ul class="pagination__list">
         <li>
           <a>1</a>
         </li>
@@ -148,16 +152,16 @@
       <a href="#">Вперёд</a>
     </section>
   </main>
-  <footer>
-    <section>
-      <h2>Как нас найти</h2>
-      <a>
+  <footer class="main-footer">
+    <section class="find-us">
+      <h2 class="find-us__title  visually-hidden">Как нас найти</h2>
+      <a class="find-us__logo">
         <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип инетрнет магазина">
       </a>
-      <address id="contacts">г. Москва, ул. Строителей, 15</address>
+      <address class="find-us__text" id="contacts">г. Москва, ул. Строителей, 15</address>
     </section>
-    <nav>
-      <ul>
+    <nav class="footer-nav-company">
+      <ul class="footer-nav-company__company-list  company-list  company-list--white">
         <li>
           <a href="#">Доставка</a>
         </li>
@@ -169,9 +173,9 @@
         </li>
       </ul>
     </nav>
-    <section>
-      <h2>Мы в социальных сетях</h2>
-      <ul>
+    <section class="social">
+      <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
+      <ul class="social__list">
         <li>
           <a href="#">Фейсбук</a>
         </li>
@@ -183,10 +187,10 @@
         </li>
       </ul>
     </section>
-    <nav>
-      <ul>
+    <nav class="footer-nav-user">
+      <ul class="footer-nav-user__user-list  user-list  user-list--opacity-white">
         <li>
-          Валентин Петухов
+          <a href="#">Валентин Петухов</a>
         </li>
         <li>
           <a href="#">Выйти</a>
@@ -199,7 +203,7 @@
         </li>
       </ul>
     </nav>
-    <p>
+    <p class="footer-contacts">
       <a href="tel:+74954959595">+7 (495) 495-95-95</a>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="HTML Academy">
