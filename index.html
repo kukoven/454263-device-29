@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header">
+    <header class="main-header  container">
       <nav class="main-nav">
         <a class="main-nav__logo  logo">
           <img src="img/logo.svg" width="163" height="35"
@@ -42,13 +42,33 @@
           </li>
         </ul>
       </nav>
+      <ul class="catalog-list">
+        <li>
+          <a href="#">Виртуальная реальность</a>
+        </li>
+        <li>
+          <a href="#">Моноподы для селфи</a>
+        </li>
+        <li>
+          <a href="#">Экшн-камеры</a>
+        </li>
+        <li>
+          <a href="#">Фитнес-браслеты</a>
+        </li>
+        <li>
+          <a href="#">Умные часы</a>
+        </li>
+        <li>
+          <a href="#">Квадрокоптер</a>
+        </li>
+      </ul>
     </header>
     <main class="main-content">
       <h1 class="main-content__title  visually-hidden">Интернет-магазин &#171;Девайс&#187;</h1>
-      <section class="promo-slider">
+      <section class="promo-slider  container">
         <h2 class="promo-slider__title  visually-hidden">Промо-слайдер</h2>
         <div class="promo-slider__item  promo-slider__item--1">
-          <img src="img/slider-1 1.png" width="384" height="486" alt="Изображение селфи-палки">
+          <img class="promo-slider__img" src="img/slider-1 1.png" width="384" height="486" alt="Изображение селфи-палки">
           <span class="promo-slider__number">01</span>
           <p class="promo-slider__text-title">
             Делай селфи, как Бен Стиллер!
@@ -72,7 +92,7 @@
           </table>
         </div>
         <div class="promo-slider__item  promo-slider__item--2">
-          <img src="img/slider-2 1.png" width="345" height="483" alt="Изображение фитнес-браслета">
+          <img class="promo-slider__img" src="img/slider-2 1.png" width="345" height="483" alt="Изображение фитнес-браслета">
           <span class="promo-slider__number">02</span>
           <p class="promo-slider__text-title">
             Худеем правильно!
@@ -92,7 +112,7 @@
           </table>
         </div>
         <div class="promo-slider__item  promo-slider__item--3">
-          <img src="img/slider-3 1.png" width="526" height="334" alt="Изображение квадрокоптера">
+          <img class="promo-slider__img" src="img/slider-3 1.png" width="526" height="334" alt="Изображение квадрокоптера">
           <span class="promo-slider__number">03</span>
           <p class="promo-slider__text-title">
             Порхает как бабочка, жалит как пчела!
@@ -124,7 +144,7 @@
           <label for="slider-btn-3"></label>
         </p>
       </section>
-      <section class="product-categories">
+      <section class="product-categories  container">
         <h2 class="product-categories__title visually-hidden">Категории товаров</h2>
         <ul class="product-categories__list">
           <li>
@@ -148,43 +168,47 @@
         </ul>
       </section>
       <section class="services-slider">
-        <h2 class="services-slider__title  visually-hidden">Сервисы</h2>
-        <p class="services-slider__input">
-          <input type="radio" id="services-btn-1" name="services-control" checked>
-          <input type="radio" id="services-btn-2" name="services-control">
-          <input type="radio" id="services-btn-3" name="services-control">
-        </p>
-        <p class="services-slider__controls">
-          <label class="button" for="services-btn-1">Доставка</label>
-          <label class="button" for="services-btn-2">Гарантия</label>
-          <label class="button" for="services-btn-3">Кредит</label>
-        </p>
-        <div class="services-slider__item  services-slider__item--1">
-          <h3 class="services-slider__item-title">Доставка</h3>
-          <p class="services-slider__item-text">
-            Мы с удовольствием доставим ваш товар прямо к вашему
-            подъезду совершенно бесплатно! Ведь мы неплохо
-            заработаем, поднимая его на ваш этаж.
+        <div class="container">
+          <h2 class="services-slider__title  visually-hidden">Сервисы</h2>
+          <p class="services-slider__input">
+            <input type="radio" id="services-btn-1" name="services-control" checked>
+            <input type="radio" id="services-btn-2" name="services-control">
+            <input type="radio" id="services-btn-3" name="services-control">
           </p>
-        </div>
-        <div class="services-slider__item  services-slider__item--2">
-          <h3 class="services-slider__item-title">Гарантия</h3>
-          <p class="services-slider__item-text">
-            Если из-за возгорания купленного у нас товара у вас сгорит дом —
-            не переживайте, мы выдадим вам новый.
-            Товар, не дом, конечно же.
-          </p>
-        </div>
-        <div class="services-slider__item  services-slider__item--3">
-          <h3 class="services-slider__item-title">Кредит</h3>
-          <p class="services-slider__item-text">
-            Залезть в долговую яму стало проще! Кредитные консультанты
-            подберут для вас наиболее выгодные
-            условия кредита. Выгодные для нашего банка, разумеется.
-          </p>
+          <div class="services-slider__wrapper">
+            <p class="services-slider__controls">
+              <label class="button" for="services-btn-1">Доставка</label>
+              <label class="button" for="services-btn-2">Гарантия</label>
+              <label class="button" for="services-btn-3">Кредит</label>
+            </p>
+            <div class="services-slider__item  services-slider__item--1">
+              <h3 class="services-slider__item-title">Доставка</h3>
+              <p class="services-slider__item-text">
+                Мы с удовольствием доставим ваш товар прямо к вашему
+                подъезду совершенно бесплатно! Ведь мы неплохо
+                заработаем, поднимая его на ваш этаж.
+              </p>
+            </div>
+            <div class="services-slider__item  services-slider__item--2">
+              <h3 class="services-slider__item-title">Гарантия</h3>
+              <p class="services-slider__item-text">
+                Если из-за возгорания купленного у нас товара у вас сгорит дом —
+                не переживайте, мы выдадим вам новый.
+                Товар, не дом, конечно же.
+              </p>
+            </div>
+            <div class="services-slider__item  services-slider__item--3">
+              <h3 class="services-slider__item-title">Кредит</h3>
+              <p class="services-slider__item-text">
+                Залезть в долговую яму стало проще! Кредитные консультанты
+                подберут для вас наиболее выгодные
+                условия кредита. Выгодные для нашего банка, разумеется.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="contribution">
+      <section class="contribution  container">
         <h2 class="contribution__title  visually-hidden">Логотипы</h2>
         <ul class="contribution__list">
           <li>
@@ -201,97 +225,105 @@
           </li>
         </ul>
       </section>
-      <section class="contacts">
-        <h2 class="contacts__title">О нас</h2>
-        <p class="contacts__text">
-          Огромный выбор гаджетов не оставит равнодушным гика,
-          который есть в каждом из нас.
-        </p>
-        <p class="contacts__text">
-          Мы можем доставить ваш товар в самые отдаленные точки
-          России! DEVICE работает со многими транспортными компаниями:
-        </p>
-        <ul class="contacts__delivery-list">
-          <li>
-            <a href="https://www.dellin.ru/">Деловые линии</a>
-          </li>
-          <li>
-            <a href="http://www.autotrading.ru/">Автотрейдинг</a>
-          </li>
-          <li>
-            <a href="https://www.jde.ru/">ЖелДорЭкспедиция</a>
-          </li>
-        </ul>
-        <a class="contacts__more button" href="#">Подробнее о нас</a>
-      </section>
-      <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__text">
-          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
-          проверить работоспособность покупки. Всякое бывает.
-        </p>
-        <iframe width="560" height="222">
-        </iframe>
-        <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11">
-          <img src="img/map 1.jpg" width="560" height="222"
-               alt="Карта с адресом магазина: ул. Строителей, 15">
-        </a>
-        <a class="contacts__mail-to  button" href="#">Напишите нам</a>
-      </section>
+      <div class="wrapper-for-contacts  container">
+        <section class="contacts">
+          <h2 class="contacts__title">О нас</h2>
+          <p class="contacts__text">
+            Огромный выбор гаджетов не оставит равнодушным гика,
+            который есть в каждом из нас.
+          </p>
+          <p class="contacts__text">
+            Мы можем доставить ваш товар в самые отдаленные точки
+            России! DEVICE работает со многими транспортными компаниями:
+          </p>
+          <ul class="contacts__delivery-list">
+            <li>
+              <a href="https://www.dellin.ru/">Деловые линии</a>
+            </li>
+            <li>
+              <a href="http://www.autotrading.ru/">Автотрейдинг</a>
+            </li>
+            <li>
+              <a href="https://www.jde.ru/">ЖелДорЭкспедиция</a>
+            </li>
+          </ul>
+          <a class="contacts__more button" href="#">Подробнее о нас</a>
+        </section>
+        <section class="contacts">
+          <h2 class="contacts__title">Контакты</h2>
+          <p class="contacts__text">
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+            проверить работоспособность покупки. Всякое бывает.
+          </p>
+          <iframe width="560" height="222">
+          </iframe>
+          <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11">
+            <img src="img/map 1.jpg" width="560" height="222"
+                 alt="Карта с адресом магазина: ул. Строителей, 15">
+          </a>
+          <a class="contacts__mail-to  button" href="#">Напишите нам</a>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
-      <section class="find-us">
-        <h2 class="find-us__title  visually-hidden">Как нас найти</h2>
-        <a class="find-us__logo">
-          <img src="img/logo.svg" width="163" height="35" alt="Логотип инетрнет магазина">
-        </a>
-        <address class="find-us__text" id="contacts">г. Москва, ул. Строителей, 15</address>
-      </section>
-      <nav class="footer-nav-company">
-        <ul class="footer-nav-company__company-list  company-list  company-list--white">
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Гарантии</a>
-          </li>
-          <li>
-            <a href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="social">
-        <h2 class="social__title  visually-hidden">Мы в социальных сетях</h2>
-        <ul class="social__list">
-          <li>
-            <a href="#">Фейсбук</a>
-          </li>
-          <li>
-            <a href="#">Инстаграм</a>
-          </li>
-          <li>
-            <a href="#">Твиттер</a>
-          </li>
-        </ul>
-      </section>
-      <nav class="footer-nav-user">
-        <ul class="footer-nav-user__user-list  user-list  user-list--opacity-white">
-          <li>
-            <a href="#">Войти</a>
-          </li>
-          <li>
-            <a href="#">Сравнить</a>
-          </li>
-          <li>
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
-      </nav>
-      <p class="footer-contacts">
-        <a href="tel:+74954959595">+7 (495) 495-95-95</a>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
-        </a>
+      <div class="main-footer__wrapper  container">
+        <section class="find-us">
+          <h2 class="find-us__title  visually-hidden">Как нас найти</h2>
+          <a class="find-us__logo">
+            <img src="img/logo-footer.svg" width="163" height="35" alt="Логотип инетрнет магазина">
+          </a>
+          <address class="find-us__text" id="contacts">г. Москва, ул. Строителей, 15</address>
+        </section>
+        <div class="main-footer__inner-wrapper">
+          <nav class="footer-nav-company">
+            <ul class="footer-nav-company__company-list  company-list  company-list--white  company-list--footer">
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Гарантии</a>
+              </li>
+              <li>
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <section class="social">
+            <h2 class="social__title  visually-hidden">Мы в социальных сетях</h2>
+            <ul class="social__list">
+              <li>
+                <a href="#">Фейсбук</a>
+              </li>
+              <li>
+                <a href="#">Инстаграм</a>
+              </li>
+              <li>
+                <a href="#">Твиттер</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="main-footer__inner-wrapper">
+          <nav class="footer-nav-user">
+            <ul class="footer-nav-user__user-list  user-list  user-list--opacity-white  user-list--footer">
+              <li>
+                <a href="#">Войти</a>
+              </li>
+              <li>
+                <a href="#">Сравнить</a>
+              </li>
+              <li>
+                <a href="#">Корзина</a>
+              </li>
+            </ul>
+          </nav>
+          <p class="footer-contacts">
+            <a href="tel:+74954959595">+7 (495) 495-95-95</a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
+            </a>
+          </p></div>
+      </div>
     </footer>
   </body>
 </html>

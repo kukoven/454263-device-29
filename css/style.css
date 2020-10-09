@@ -57,6 +57,8 @@
 /*Global*/
 
 .page-body {
+  min-width: 1200px;
+
   font-family: "Gilroy", "Arial", sans-serif;
   color: var(--black);
 
@@ -104,6 +106,10 @@
 
 .main-nav__company-list li:first-child {
   letter-spacing: 0.1em;
+}
+
+.catalog-list {
+  display: none;
 }
 
 /*nav-list*/
@@ -231,6 +237,10 @@
 
 .services-slider {
   background-color: var(--light-gray);
+}
+
+.services-slider__input {
+  display: none;
 }
 
 .services-slider__controls label:active {
@@ -452,4 +462,146 @@
 
 .pagination > a[href]:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+/*Grid*/
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+/*header*/
+
+.main-nav {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.user-list, .company-list {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+
+  margin: 0;
+  padding: 0;
+}
+
+/*promo-slider*/
+
+.promo-slider__item {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, min-content);
+}
+
+.promo-slider__img {
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.promo-slider__item--2, .promo-slider__item--3 {
+  display: none;
+}
+
+/*product-categories*/
+
+.product-categories__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 40px;
+
+  margin: 0;
+  padding: 0;
+}
+
+/*services-slider*/
+
+.services-slider__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.services-slider__controls {
+  display: grid;
+
+  margin: 0;
+}
+
+.services-slider__item--2, .services-slider__item--3 {
+  display: none;
+}
+
+/*contribution*/
+
+.contribution__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 40px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*contacts*/
+
+.wrapper-for-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*footer*/
+
+.main-footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.company-list--footer {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main-footer__inner-wrapper {
+  display: grid;
+}
+
+.footer-nav-company {
+  justify-self: center;
+}
+
+.social {
+  justify-self: center;
+}
+
+.social__list {
+ display: grid;
+  grid-template-columns: repeat(3, min-content);
+
+  margin: 0;
+  padding: 0;
+}
+
+.user-list--footer {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-contacts {
+  display: grid;
+}
+
+.footer-contacts a {
+  justify-self: end;
 }
