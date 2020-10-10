@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header  container">
+    <header class="main-header  main-header--margin  container">
       <nav class="main-nav">
         <a class="main-nav__logo  logo">
           <img src="img/logo.svg" width="163" height="35"
@@ -30,6 +30,26 @@
         <ul class="main-nav__company-list  company-list">
           <li>
             <a href="catalog.html">Каталог товаров</a>
+            <ul class="catalog-list">
+              <li>
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="#">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="#">Экшн-камеры</a>
+              </li>
+              <li>
+                <a href="#">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a href="#">Умные часы</a>
+              </li>
+              <li>
+                <a href="#">Квадрокоптер</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#">Доставка</a>
@@ -42,30 +62,10 @@
           </li>
         </ul>
       </nav>
-      <ul class="catalog-list">
-        <li>
-          <a href="#">Виртуальная реальность</a>
-        </li>
-        <li>
-          <a href="#">Моноподы для селфи</a>
-        </li>
-        <li>
-          <a href="#">Экшн-камеры</a>
-        </li>
-        <li>
-          <a href="#">Фитнес-браслеты</a>
-        </li>
-        <li>
-          <a href="#">Умные часы</a>
-        </li>
-        <li>
-          <a href="#">Квадрокоптер</a>
-        </li>
-      </ul>
     </header>
     <main class="main-content">
       <h1 class="main-content__title  visually-hidden">Интернет-магазин &#171;Девайс&#187;</h1>
-      <section class="promo-slider  container">
+      <section class="promo-slider  promo-slider--margin  container">
         <h2 class="promo-slider__title  visually-hidden">Промо-слайдер</h2>
         <div class="promo-slider__item  promo-slider__item--1">
           <img class="promo-slider__img" src="img/slider-1 1.png" width="384" height="486" alt="Изображение селфи-палки">
@@ -144,7 +144,7 @@
           <label for="slider-btn-3"></label>
         </p>
       </section>
-      <section class="product-categories  container">
+      <section class="product-categories  product-categories--margin  container">
         <h2 class="product-categories__title visually-hidden">Категории товаров</h2>
         <ul class="product-categories__list">
           <li>
@@ -167,7 +167,7 @@
           </li>
         </ul>
       </section>
-      <section class="services-slider">
+      <section class="services-slider  services-slider--margin">
         <div class="container">
           <h2 class="services-slider__title  visually-hidden">Сервисы</h2>
           <p class="services-slider__input">
@@ -208,7 +208,7 @@
           </div>
         </div>
       </section>
-      <section class="contribution  container">
+      <section class="contribution  contribution--margin  container">
         <h2 class="contribution__title  visually-hidden">Логотипы</h2>
         <ul class="contribution__list">
           <li>
@@ -255,9 +255,7 @@
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
             проверить работоспособность покупки. Всякое бывает.
           </p>
-          <iframe width="560" height="222">
-          </iframe>
-          <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11">
+          <a class="contacts__map" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.315635%2C59.938951&z=11">
             <img src="img/map 1.jpg" width="560" height="222"
                  alt="Карта с адресом магазина: ул. Строителей, 15">
           </a>

@@ -100,8 +100,20 @@
 
 /*header*/
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .main-header {
+  padding-bottom: 164px;
+
   background-color: var(--yellow-light);
+}
+
+.main-header--margin {
+  margin-top: 40px
 }
 
 .main-nav__company-list li:first-child {
@@ -178,6 +190,11 @@
   font-weight: 800;
 }
 
+.promo-slider--margin {
+  margin-top: -124px;
+  margin-bottom: 116px;
+}
+
 .promo-slider__number {
   font-size: 179px;
   line-height: 219px;
@@ -215,10 +232,18 @@
   line-height: 15px;
 }
 
+.promo-slider__input {
+  display: none;
+}
+
 /*Product categories*/
 
 .product-categories__list {
   list-style: none;
+}
+
+.product-categories--margin {
+  margin-bottom: 184px;
 }
 
 .product-categories__list a {
@@ -239,6 +264,10 @@
   background-color: var(--light-gray);
 }
 
+.services-slider--margin {
+  margin-bottom: 90px;
+}
+
 .services-slider__input {
   display: none;
 }
@@ -247,7 +276,18 @@
   color: var(--yellow-light);
 }
 
+.services-slider__controls {
+  margin: -11px 0 0 0;
+  padding-bottom: 153px;
+}
+
+.services-slider__item {
+  margin: -29px 0 0 0;
+}
+
 .services-slider__item-title {
+  margin: 0 0 40px 0;
+
   font-size: 47px;
   line-height: 58px;
   font-weight: 800;
@@ -255,6 +295,8 @@
 }
 
 .services-slider__item-text {
+  margin: 0;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 28px;
@@ -262,9 +304,18 @@
   letter-spacing: 0.1em;
 }
 
+/*contribution*/
+
+.contribution--margin {
+  margin-bottom: 90px;
+}
+
 /*contacts*/
 
 .contacts__title {
+  margin: 0 0 50px 0;
+  padding-top: 50px;
+
   font-size: 47px;
   line-height: 58px;
   font-weight: 800;
@@ -272,18 +323,36 @@
 }
 
 .contacts__text {
+  margin: 0 0 40px 0;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 28px;
   font-weight: 300;
 }
 
+.contacts__text + .contacts__text {
+  margin-bottom: 60px;
+}
+
 .contacts__delivery-list {
+  margin: 0 0 84px 0;
+  padding: 0;
+
   font-size: 16px;
   line-height: 28px;
   font-weight: 800;
 
   list-style: none;
+}
+
+.contacts__delivery-list {
+  display: grid;
+  grid-template-rows: min-content;
+}
+
+.contacts__delivery-list li:not(:last-child) {
+  margin-bottom: 11px;
 }
 
 .contacts__delivery-list a {
@@ -293,6 +362,18 @@
 .contacts__more:active,
 .contacts__mail-to:active {
   opacity: 0.3;
+}
+
+.contacts__map {
+  margin-bottom: 85px;
+}
+
+.contacts__map img {
+  display: block;
+}
+
+.contacts > a:last-child {
+  margin-bottom: 86px;
 }
 
 /*Footer*/
@@ -306,6 +387,11 @@
 }
 
 /*Find-us*/
+
+.find-us {
+  padding-top: 64px;
+
+}
 
 .find-us__text {
   font-size: 15px;
@@ -466,12 +552,6 @@
 
 /*Grid*/
 
-.container {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .page {
   height: 100%;
 }
@@ -487,12 +567,33 @@
 
 .main-nav {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, min-content);
 }
 
-.user-list, .company-list {
+.main-nav__logo {
+  margin-top: -20px;
+  margin-bottom: 29px;
+}
+
+.main-nav__logo img {
+  display: block;
+}
+
+.user-list {
   display: grid;
   grid-template-columns: 3fr 2fr 1fr 1fr;
+
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__user-list {
+  margin-bottom: 50px;
+}
+
+.company-list {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr 1fr;
 
   margin: 0;
   padding: 0;
@@ -536,8 +637,8 @@
 
 .services-slider__controls {
   display: grid;
-
-  margin: 0;
+  grid-template-rows: repeat(3, min-content);
+  row-gap: 39px;
 }
 
 .services-slider__item--2, .services-slider__item--3 {
@@ -563,7 +664,18 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.contacts {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+}
+
 /*footer*/
+
+.find-us {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 38px;
+}
 
 .main-footer__wrapper {
   display: grid;
@@ -572,10 +684,23 @@
 
 .company-list--footer {
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 36px;
 }
 
-.main-footer__inner-wrapper {
+.main-footer__inner-wrapper:first-of-type {
   display: grid;
+  grid-template-rows: min-content min-content;
+  row-gap: 67px;
+
+  padding-top: 138px;
+  padding-bottom: 65px;
+}
+
+.main-footer__inner-wrapper:last-of-type {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+
+  padding-top: 47px;
 }
 
 .footer-nav-company {
@@ -589,6 +714,7 @@
 .social__list {
  display: grid;
   grid-template-columns: repeat(3, min-content);
+  column-gap: 20px;
 
   margin: 0;
   padding: 0;
@@ -596,12 +722,21 @@
 
 .user-list--footer {
   grid-template-columns: repeat(3, 1fr);
+
+  margin-bottom: 73px;
 }
 
 .footer-contacts {
   display: grid;
+
+  margin: 0;
+}
+
+.footer-contacts a:first-child {
+  margin-bottom: 67px;
 }
 
 .footer-contacts a {
   justify-self: end;
 }
+
