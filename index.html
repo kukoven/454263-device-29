@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header  main-header--margin  container">
+    <header class="main-header  main-header--margin  container  container--header">
       <nav class="main-nav">
         <a class="main-nav__logo  logo">
           <img src="img/logo.svg" width="163" height="35"
@@ -15,21 +15,25 @@
         </a>
         <ul class="main-nav__user-list  user-list">
           <li>
-            <!--Здесь будет форма с поиском-->
+            <form class="user-list__form">
+              <input id="search-input" class="user-list__search" type="search" placeholder="Поиск по сайту">
+              <button class="user-list__search-button" type="button">Найти</button>
+              <label for="search-input" class="user-list__search-label"></label>
+            </form>
           </li>
           <li>
-            <a href="#">Войти</a>
+            <a class="user-list__link  user-list__link--user" href="#">Войти</a>
           </li>
           <li>
-            <a href="#">Сравнить</a>
+            <a class="user-list__link  user-list__link--compare" href="#">Сравнить</a>
           </li>
           <li>
-            <a href="#">Корзина</a>
+            <a class="user-list__link  user-list__link--cart" href="#">Корзина</a>
           </li>
         </ul>
         <ul class="main-nav__company-list  company-list">
           <li>
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="company-list__catalog-link" href="catalog.html">Каталог товаров</a>
             <ul class="catalog-list">
               <li>
                 <a href="#">Виртуальная реальность</a>
@@ -68,8 +72,11 @@
       <section class="promo-slider  promo-slider--margin  container">
         <h2 class="promo-slider__title  visually-hidden">Промо-слайдер</h2>
         <div class="promo-slider__item  promo-slider__item--1">
-          <img class="promo-slider__img" src="img/slider-1 1.png" width="384" height="486" alt="Изображение селфи-палки">
-          <span class="promo-slider__number">01</span>
+          <div class="promo-slider__img">
+            <img src="img/slider-1 1.png"
+                 width="384" height="486"
+                 alt="Изображение селфи-палки">
+          </div>
           <p class="promo-slider__text-title">
             Делай селфи, как Бен Стиллер!
           </p>
@@ -80,8 +87,8 @@
           <a class="promo-slider__more  button" href="#">Подробнее</a>
           <table class="promo-slider__table  promo-slider__table--1">
             <tr>
-              <th>8.5 м</th>
-              <th>5 кг</th>
+              <th>8,5  м</th>
+              <th>5  кг</th>
               <th>Карбон</th>
             </tr>
             <tr>
@@ -92,8 +99,11 @@
           </table>
         </div>
         <div class="promo-slider__item  promo-slider__item--2">
-          <img class="promo-slider__img" src="img/slider-2 1.png" width="345" height="483" alt="Изображение фитнес-браслета">
-          <span class="promo-slider__number">02</span>
+          <div class="promo-slider__img">
+            <img src="img/slider-2 1.png"
+                 width="345" height="483"
+                 alt="Изображение фитнес-браслета">
+          </div>
           <p class="promo-slider__text-title">
             Худеем правильно!
           </p>
@@ -112,8 +122,11 @@
           </table>
         </div>
         <div class="promo-slider__item  promo-slider__item--3">
-          <img class="promo-slider__img" src="img/slider-3 1.png" width="526" height="334" alt="Изображение квадрокоптера">
-          <span class="promo-slider__number">03</span>
+          <div class="promo-slider__img">
+            <img src="img/slider-3 1.png"
+                 width="526" height="334"
+                 alt="Изображение квадрокоптера">
+          </div>
           <p class="promo-slider__text-title">
             Порхает как бабочка, жалит как пчела!
           </p>
@@ -133,54 +146,50 @@
             </tr>
           </table>
         </div>
-        <p class="promo-slider__input">
-          <input type="radio" id="slider-btn-1" name="slider-btn" checked>
-          <input type="radio" id="slider-btn-2" name="slider-btn">
-          <input type="radio" id="slider-btn-3" name="slider-btn">
-        </p>
         <p class="promo-slider__controls">
-          <label for="slider-btn-1"></label>
-          <label for="slider-btn-2"></label>
-          <label for="slider-btn-3"></label>
+          <button type="button"></button>
+          <button type="button"></button>
+          <button type="button"></button>
         </p>
       </section>
       <section class="product-categories  product-categories--margin  container">
         <h2 class="product-categories__title visually-hidden">Категории товаров</h2>
         <ul class="product-categories__list">
           <li class="product-categories__item">
-            <a href="#">Виртуальная реальность</a>
+            <a class="product-categories__link  product-categories__link--1" href="#">Виртуальная реальность</a>
           </li>
           <li class="product-categories__item">
-            <a href="catalog.html">Моноподы для селфи</a>
+            <a class="product-categories__link  product-categories__link--2" href="catalog.html">Моноподы для селфи</a>
           </li>
           <li class="product-categories__item">
-            <a href="#">Экшн камеры</a>
+            <a class="product-categories__link  product-categories__link--3" href="#">Экшн-камеры</a>
           </li>
           <li class="product-categories__item">
-            <a href="#">Фитнес-браслеты</a>
+            <a class="product-categories__link  product-categories__link--4" href="#">Фитнес-браслеты</a>
           </li>
           <li class="product-categories__item">
-            <a href="#">Умные часы</a>
+            <a class="product-categories__link  product-categories__link--5" href="#">Умные часы</a>
           </li>
           <li class="product-categories__item">
-            <a href="#">Квадрокоптеры</a>
+            <a class="product-categories__link  product-categories__link--6" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
       <section class="services-slider  services-slider--margin">
         <div class="container">
           <h2 class="services-slider__title  visually-hidden">Сервисы</h2>
-          <p class="services-slider__input">
-            <input type="radio" id="services-btn-1" name="services-control" checked>
-            <input type="radio" id="services-btn-2" name="services-control">
-            <input type="radio" id="services-btn-3" name="services-control">
-          </p>
           <div class="services-slider__wrapper">
-            <p class="services-slider__controls">
-              <label class="button" for="services-btn-1">Доставка</label>
-              <label class="button" for="services-btn-2">Гарантия</label>
-              <label class="button" for="services-btn-3">Кредит</label>
-            </p>
+            <ul class="services-slider__controls">
+              <li class="services-slider__controls-item  current">
+                <button class="services-slider__button" type="button">Доставка</button>
+              </li>
+              <li class="services-slider__controls-item">
+                <button class="services-slider__button" type="button">Гарантия</button>
+              </li>
+              <li class="services-slider__controls-item">
+                <button class="services-slider__button" type="button">Кредит</button>
+              </li>
+            </ul>
             <div class="services-slider__item  services-slider__item--1">
               <h3 class="services-slider__item-title">Доставка</h3>
               <p class="services-slider__item-text">
@@ -211,16 +220,16 @@
       <section class="contribution  contribution--margin  container">
         <h2 class="contribution__title  visually-hidden">Логотипы</h2>
         <ul class="contribution__list">
-          <li>
+          <li class="contribution__item  contribution__item--1">
             <img src="img/logo-1 1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
-          <li>
+          <li class="contribution__item  contribution__item--2">
             <img src="img/logo-2 1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
-          <li>
+          <li class="contribution__item  contribution__item--3">
             <img src="img/logo-3 1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
-          <li>
+          <li class="contribution__item  contribution__item--4">
             <img src="img/logo-4 1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
         </ul>
@@ -247,7 +256,7 @@
               <a href="https://www.jde.ru/">ЖелДорЭкспедиция</a>
             </li>
           </ul>
-          <a class="contacts__more button" href="#">Подробнее о нас</a>
+          <a class="contacts__more button  button--contacts-more" href="#">Подробнее о нас</a>
         </section>
         <section class="contacts">
           <h2 class="contacts__title">Контакты</h2>
@@ -259,7 +268,7 @@
             <img src="img/map 1.jpg" width="560" height="222"
                  alt="Карта с адресом магазина: ул. Строителей, 15">
           </a>
-          <a class="contacts__mail-to  button" href="#">Напишите нам</a>
+          <a class="contacts__mail-to  button  button--contacts-mail-to" href="#">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -274,7 +283,7 @@
         </section>
         <div class="main-footer__inner-wrapper">
           <nav class="footer-nav-company">
-            <ul class="footer-nav-company__company-list  company-list  company-list--white  company-list--footer">
+            <ul class="footer-nav-company__company-list company-list company-list--white  company-list--footer">
               <li>
                 <a href="#">Доставка</a>
               </li>
@@ -289,34 +298,34 @@
           <section class="social">
             <h2 class="social__title  visually-hidden">Мы в социальных сетях</h2>
             <ul class="social__list">
-              <li>
-                <a href="#">Фейсбук</a>
+              <li class="social__item">
+                <a class="social__link  social__link--facebook" href="#"></a>
               </li>
-              <li>
-                <a href="#">Инстаграм</a>
+              <li class="social__item">
+                <a class="social__link  social__link--insta" href="#"></a>
               </li>
-              <li>
-                <a href="#">Твиттер</a>
+              <li class="social__item">
+                <a class="social__link  social__link--twitter" href="#"></a>
               </li>
             </ul>
           </section>
         </div>
         <div class="main-footer__inner-wrapper">
           <nav class="footer-nav-user">
-            <ul class="footer-nav-user__user-list  user-list  user-list--opacity-white  user-list--footer">
+            <ul class="footer-nav-user__user-list user-list user-list--opacity-white  user-list--footer">
               <li>
-                <a href="#">Войти</a>
+                <a class="footer-nav-user__link  footer-nav-user__link--sign-in" href="#">Войти</a>
               </li>
               <li>
-                <a href="#">Сравнить</a>
+                <a class="footer-nav-user__link  footer-nav-user__link--compare" href="#">Сравнить</a>
               </li>
               <li>
-                <a href="#">Корзина</a>
+                <a class="footer-nav-user__link  footer-nav-user__link--cart" href="#">Корзина</a>
               </li>
             </ul>
           </nav>
           <p class="footer-contacts">
-            <a href="tel:+74954959595">+7 (495) 495-95-95</a>
+            <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
             <a href="https://htmlacademy.ru/intensive/htmlcss">
               <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
             </a>
