@@ -108,6 +108,8 @@
   border: none;
   outline: none;
 
+  cursor: pointer;
+
   background-color: transparent;
 }
 
@@ -174,9 +176,11 @@
 }
 
 .main-nav {
+  position: relative;
+
   display: grid;
 
-  padding: 0 60px;
+  margin: 0 60px;
 }
 
 .main-nav__logo {
@@ -202,10 +206,6 @@
 
 .main-nav__company-list li:first-child {
   letter-spacing: 0.1em;
-}
-
-.catalog-list {
-  display: none;
 }
 
 /*nav-list*/
@@ -459,7 +459,7 @@
 
 .company-list {
   display: grid;
-  grid-template-columns: 540px repeat(3, max-content);
+  grid-template-columns: repeat(4, max-content);
 
   margin: 0;
   padding: 0;
@@ -534,6 +534,10 @@
   background-image: url("../img/icon_plus.svg");
 }
 
+.company-list__item--catalog {
+  margin-right: 283px;
+}
+
 .company-list li:nth-child(2) {
   margin-right: 36px;
 }
@@ -548,6 +552,69 @@
 
 .company-list--footer li:nth-child(3) {
   margin-right: 0;
+}
+
+.catalog-list {
+  position: absolute;
+  z-index: 1;
+
+  display: none;
+  grid-template-areas:
+              "one four six"
+              "two five ."
+              "three . .";
+  grid-template-columns: repeat(3, max-content);
+  row-gap: 15px;
+  column-gap: 63px;
+
+  width: 100%;
+  padding: 33px 0 40px 0;
+
+  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-transform: none;
+
+  list-style: none;
+  background-color: var(--yellow-light);
+}
+
+.company-list__item--catalog:hover .catalog-list {
+  display: grid;
+}
+
+.catalog-list li:first-child {
+  letter-spacing: normal;
+}
+
+.catalog-list li:nth-child(2) {
+  margin-right: 0;
+}
+
+.catalog-list li:nth-child(3) {
+  margin-right: 0;
+}
+
+.catalog-list__item--1 {
+  grid-area: one;
+}
+
+.catalog-list__item--2 {
+  grid-area: two;
+}
+.catalog-list__item--3 {
+  grid-area: three;
+}
+.catalog-list__item--4 {
+  grid-area: four;
+}
+.catalog-list__item--5 {
+  grid-area: five;
+}
+.catalog-list__item--6 {
+  grid-area: six;
 }
 
 /*promo-slider*/
@@ -1706,3 +1773,166 @@
 
   grid-template-rows: repeat(2, min-content);
 }
+
+
+/*modal*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+
+  display: none;
+
+  margin: auto;
+}
+
+.modal-write-us {
+  display: none;
+  box-sizing: border-box;
+  width: 960px;
+  height: 550px;
+  padding: 92px 100px 69px 100px;
+
+  background-color: var(--white);
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 55px;
+  height: 55px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: var(--yellow-light);
+
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal__close-button::before,
+.modal__close-button::after {
+  content: "";
+
+  position: absolute;
+  top: 26px;
+  left: 14px;
+
+  width: 50%;
+  height: 2px;
+
+  background-color: var(--white);
+}
+
+.modal__close-button::after {
+  transform: rotate(-45deg);
+}
+
+.modal__close-button::before {
+  transform: rotate(45deg);
+}
+
+.form-write-us {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.form-write-us__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+.form-write-us__info {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+
+  color: rgba(0, 0, 0, 0.4)
+}
+
+.form-write-us__wrapper input {
+  box-sizing: border-box;
+  width: 360px;
+
+  padding: 16px 0 15px 20px;
+
+  color: inherit;
+
+  border: 0;
+  outline: none;
+
+  background-color: #F2F2F2;
+}
+
+.form-write-us__info label {
+  margin-bottom: 10px;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+
+  color: var(--black);
+}
+
+.form-write-us textarea::placeholder,
+.form-write-us input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form-write-us textarea {
+  box-sizing: border-box;
+  width: 760px;
+  height: 168px;
+  padding: 16px 0 132px 20px;
+
+  background-color: #F2F2F2;
+
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.form-write-us__info:only-of-type {
+  margin-bottom: 54px;
+}
+
+.form-write-us__button {
+  width: 200px;
+}
+
+.button--form-write-us::after {
+  background-color: var(--yellow-light);
+}
+
+.modal-map {
+  width: 994px;
+  height: 593px;
+}
+
+.modal-map .modal__close-button {
+  top: 29px;
+  right: 36px;
+}
+
+.modal-show {
+  display: block;
+}
+

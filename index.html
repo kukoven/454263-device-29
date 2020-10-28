@@ -32,36 +32,36 @@
           </li>
         </ul>
         <ul class="main-nav__company-list  company-list">
-          <li>
+          <li class="company-list__item  company-list__item--catalog">
             <a class="company-list__catalog-link" href="catalog.html">Каталог товаров</a>
             <ul class="catalog-list">
-              <li>
-                <a href="#">Виртуальная реальность</a>
+              <li class="catalog-list__item  catalog-list__item--1">
+                <a class="catalog-list__link" href="#">Виртуальная реальность</a>
               </li>
-              <li>
-                <a href="#">Моноподы для селфи</a>
+              <li class="catalog-list__item  catalog-list__item--2">
+                <a class="catalog-list__link" href="#">Моноподы для селфи</a>
               </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
+              <li class="catalog-list__item  catalog-list__item--3">
+                <a class="catalog-list__link" href="#">Экшн-камеры</a>
               </li>
-              <li>
-                <a href="#">Фитнес-браслеты</a>
+              <li class="catalog-list__item  catalog-list__item--4">
+                <a class="catalog-list__link" href="#">Фитнес-браслеты</a>
               </li>
-              <li>
-                <a href="#">Умные часы</a>
+              <li class="catalog-list__item  catalog-list__item--5">
+                <a class="catalog-list__link" href="#">Умные часы</a>
               </li>
-              <li>
-                <a href="#">Квадрокоптер</a>
+              <li class="catalog-list__item  catalog-list__item--6">
+                <a class="catalog-list__link" href="#">Квадрокоптер</a>
               </li>
             </ul>
           </li>
-          <li>
+          <li class="company-list__item">
             <a href="#">Доставка</a>
           </li>
-          <li>
+          <li class="company-list__item">
             <a href="#">Гарантия</a>
           </li>
-          <li>
+          <li class="company-list__item">
             <a href="#contacts">Контакты</a>
           </li>
         </ul>
@@ -147,9 +147,9 @@
           </table>
         </div>
         <p class="promo-slider__controls">
-          <button type="button"></button>
-          <button type="button"></button>
-          <button type="button"></button>
+          <button type="button" aria-label="Выбор первого слайда"></button>
+          <button type="button" aria-label="Выбор второго слайда"></button>
+          <button type="button" aria-label="Выбор третьего слайда"></button>
         </p>
       </section>
       <section class="product-categories  product-categories--margin  container">
@@ -333,5 +333,29 @@
         </div>
       </div>
     </footer>
+    <section class="modal  modal-write-us">
+      <form class="modal-write-us__form  form-write-us">
+        <div class="form-write-us__wrapper">
+          <p class="form-write-us__info">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="form-write-us__info">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="email@example.com">
+          </p>
+        </div>
+        <p class="form-write-us__info">
+          <label for="text">Текст письма:</label>
+          <textarea id="text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="form-write-us__button  button  button--form-write-us">Отправить</button>
+      </form>
+      <button class="modal__close-button" aria-label="Закрыть форму обратной связи"></button>
+    </section>
+    <section class="modal  modal-map">
+      <img class="modal-map__img" src="img/map-big 1.png" width="994" height="593" alt="Улица строителей, 15">
+      <button class="modal__close-button" aria-label="Кнопка закрытия карты проезда"></button>
+    </section>
   </body>
 </html>
