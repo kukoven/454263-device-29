@@ -7,50 +7,54 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page-body">
-  <header class="main-header  main-header--margin  main-header--inner-page  container">
+  <header class="main-header  main-header--margin  main-header--inner-page  container  container--header">
     <nav class="main-nav">
-      <a class="main-nav__logo  logo">
+      <a class="main-nav__logo  logo" href="index.html">
         <img src="img/logo.svg" width="163" height="35"
              alt="Логотип интернет-магазина &#171;Девайс&#187;">
       </a>
       <ul class="main-nav__user-list  user-list  user-list--catalog-view">
         <li>
-          <!--Здесь будет форма с поиском-->
+          <form class="user-list__form">
+            <input id="search-input" class="user-list__search" type="search" placeholder="Поиск по сайту">
+            <button class="user-list__search-button" type="button">Найти</button>
+            <label for="search-input" class="user-list__search-label"></label>
+          </form>
         </li>
         <li>
-          <a href="#">Валентин Петухов</a>
+          <a class="user-list__link  user-list__link--user" href="#">Валентин Петухов</a>
         </li>
         <li>
           <a href="#">Выйти</a>
         </li>
         <li>
-          <a href="#">Сравнить</a>
+          <a class="user-list__link  user-list__link--compare" href="#">Сравнить</a>
         </li>
         <li>
-          <a href="#">Корзина</a>
+          <a class="user-list__link  user-list__link--cart" href="#">Корзина</a>
         </li>
       </ul>
       <ul class="main-nav__company-list  company-list">
-        <li>
-          <a href="catalog.html">Каталог товаров</a>
-          <ul class="catalog-list">
-            <li>
-              <a href="#">Виртуальная реальность</a>
+        <li class="company-list__item  company-list__item--catalog">
+          <a class="company-list__catalog-link" href="catalog.html">Каталог товаров</a>
+          <ul class="catalog-list  catalog-list--inner-page">
+            <li class="catalog-list__item  catalog-list__item--1">
+              <a class="catalog-list__link" href="#">Виртуальная реальность</a>
             </li>
-            <li>
-              <a href="#">Моноподы для селфи</a>
+            <li class="catalog-list__item  catalog-list__item--2">
+              <a class="catalog-list__link" href="#">Моноподы для селфи</a>
             </li>
-            <li>
-              <a href="#">Экшн-камеры</a>
+            <li class="catalog-list__item  catalog-list__item--3">
+              <a class="catalog-list__link" href="#">Экшн-камеры</a>
             </li>
-            <li>
-              <a href="#">Фитнес-браслеты</a>
+            <li class="catalog-list__item  catalog-list__item--4">
+              <a class="catalog-list__link" href="#">Фитнес-браслеты</a>
             </li>
-            <li>
-              <a href="#">Умные часы</a>
+            <li class="catalog-list__item  catalog-list__item--5">
+              <a class="catalog-list__link" href="#">Умные часы</a>
             </li>
-            <li>
-              <a href="#">Квадрокоптер</a>
+            <li class="catalog-list__item  catalog-list__item--6">
+              <a class="catalog-list__link" href="#">Квадрокоптер</a>
             </li>
           </ul>
         </li>
@@ -83,12 +87,12 @@
       <div class="sort__wrapper  container">
         <h2 class="sort__title  visually-hidden">Сортировка:</h2>
         <div class="filter-header">
-          <span>Фильтр</span>
+          <span>Фильтр:</span>
         </div>
         <div class="sort__wrapper-for-sort">
           <ul class="sort__list">
             <li class="sort__item">
-              <span>Сортировка</span>
+              <span>Сортировка:</span>
             </li>
             <li class="sort__item  sort__item--active">
               <a>По цене</a>
@@ -101,8 +105,8 @@
             </li>
           </ul>
           <p class="sort__buttons">
-            <button type="button" disabled>Возрастание</button>
-            <button type="button">Убывание</button>
+            <button type="button" disabled aria-label="Кнопка сортировки по возрастанию"></button>
+            <button type="button" aria-label="Кнопка сортировки по убыванию"></button>
           </p>
         </div>
       </div>
@@ -122,11 +126,14 @@
                      alt="Любительская селфи-палка">
               </p>
               <p class="mono-pods__buttons">
-                <button class="button" type="button">в корзину</button>
+                <button class="button  button--in-cart" type="button">в корзину</button>
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">Любительская селфи-палка<span>500 руб.</span></a>
+                <a href="#">
+                  <span>Любительская селфи-палка</span>
+                  <span>1 100 руб.</span>
+                </a>
               </p>
             </li>
             <li class="mono-pods__item">
@@ -135,11 +142,17 @@
                      alt="Профессиональная селфи-палка">
               </p>
               <p class="mono-pods__buttons">
-                <button class="button" type="button">в корзину</button>
+                <button class="button button--in-cart" type="button">в корзину</button>
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">Профессиональная селфи-палка<span>1 500 руб.</span></a>
+                <a href="#">
+                  <span>
+                    Профессиональная<br>
+                    селфи-палка
+                  </span>
+                  <span>1 500 руб.</span>
+                </a>
               </p>
             </li>
             <li class="mono-pods__item">
@@ -148,11 +161,16 @@
                      alt="Непотопляемая селфи-палка">
               </p>
               <p class="mono-pods__buttons">
-                <button class="button" type="button">в корзину</button>
+                <button class="button  button--in-cart" type="button">в корзину</button>
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">Непотомляемая селфи-палка <span>2 500 руб.</span></a>
+                <a href="#">
+                  <span>Непотомляемая<br>
+                    селфи-палка
+                  </span>
+                  <span>2 500 руб.</span>
+                </a>
               </p>
             </li>
             <li class="mono-pods__item">
@@ -161,11 +179,16 @@
                      alt="Селфи-палка &#171;Следуй за мной&#187;">
               </p>
               <p class="mono-pods__buttons">
-                <button class="button" type="button">в корзину</button>
+                <button class="button  button--in-cart" type="button">в корзину</button>
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">Селфи-палка &#171;Следуй за мной&#187;<span>4 900 руб.</span></a>
+                <a href="#">
+                  <span>Селфи-палка &#171;Следуй за<br>
+                    мной&#187;
+                  </span>
+                  <span>4 900 руб.</span>
+                </a>
               </p>
             </li>
           </ul>
@@ -198,7 +221,7 @@
       </section>
       <address class="find-us__text  find-us__text--catalog" id="contacts">г. Москва, ул. Строителей, 15</address>
       <div class="main-footer__inner-wrapper  main-footer__inner-wrapper--catalog">
-        <nav class="footer-nav-company">
+        <nav class="footer-nav-company  footer-nav-company--inner-page">
           <ul class="footer-nav-company__company-list  company-list  company-list--white company-list--footer">
             <li>
               <a href="#">Доставка</a>
@@ -211,17 +234,17 @@
             </li>
           </ul>
         </nav>
-        <section class="social">
+        <section class="social  social--inner-page">
           <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
           <ul class="social__list">
-            <li>
-              <a href="#">Фейсбук</a>
+            <li class="social__item">
+              <a class="social__link  social__link--facebook" href="#" aria-label="Facebook"></a>
             </li>
-            <li>
-              <a href="#">Инстаграм</a>
+            <li class="social__item">
+              <a class="social__link  social__link--insta" href="#" aria-label="Instagram"></a>
             </li>
-            <li>
-              <a href="#">Твиттер</a>
+            <li class="social__item">
+              <a class="social__link  social__link--twitter" href="#" aria-label="Twitter"></a>
             </li>
           </ul>
         </section>
@@ -229,21 +252,23 @@
       <nav class="footer-nav-user  footer-nav-user--catalog">
         <ul class="footer-nav-user__user-list  user-list  user-list--opacity-white  user-list--footer-catalog">
           <li class="user-list__item-catalog">
-            <a href="#">Валентин Петухов</a>
+            <a class="footer-nav-user__link  footer-nav-user__link--sign-in  footer-nav-user__link--sign-in-inner-page"
+               href="#">Валентин Петухов
+            </a>
           </li>
           <li class="user-list__item-catalog">
             <a href="#">Выйти</a>
           </li>
           <li class="user-list__item-catalog">
-            <a href="#">Сравнить</a>
+            <a class="footer-nav-user__link  footer-nav-user__link--compare" href="#">Сравнить</a>
           </li>
           <li class="user-list__item-catalog">
-            <a href="#">Корзина</a>
+            <a class="footer-nav-user__link  footer-nav-user__link--cart" href="#">Корзина</a>
           </li>
         </ul>
       </nav>
       <p class="footer-contacts  footer-contacts--catalog">
-        <a href="tel:+74954959595">+7 (495) 495-95-95</a>
+        <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
         </a>
