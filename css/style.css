@@ -575,7 +575,7 @@
   width: 100%;
   padding: 33px 0 40px 0;
 
-  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
@@ -1448,10 +1448,10 @@
 }
 
 .catalog-list--inner-page {
-  left: -80px;
+  left: -60px;
 
   box-sizing: border-box;
-  width: 1200px;
+  width: 1160px;
   padding-left: 79px;
 }
 
@@ -1774,7 +1774,7 @@
 .mono-pods__buttons button:last-child {
   margin-bottom: 138px;
 
-  font-family: "Open Sans Light", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 300;
