@@ -115,7 +115,80 @@
       <div class="wrapper-for-catalog-and-filter  container">
         <section class="filter">
           <h2 class="filter__title  visually-hidden">Фильтр</h2>
-          <!--Здесь будет форма фильтра-->
+          <form class="filter__form" method="post" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter__item">
+              <legend>Стоимость</legend>
+              <div class="filter__range  range-filter">
+                <div class="range-filter__range-controls">
+                  <div class="range-filter__scale">
+                    <div class="range-filter__bar" style="width: 57%"></div>
+                  </div>
+                  <div class="range-filter__toggle  range-filter__toggle--min"
+                       tabindex="0"
+                       style="left: 0">
+                  </div>
+                  <div class="range-filter__toggle  range-filter__toggle--max"
+                       tabindex="0"
+                       style="left: 57%"></div>
+                </div>
+                <div class="range-filter__price-controls">
+                  <label class="range-filter__min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="range-filter__max-price">
+                    до <input type="number" name="max-price" value="5000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter__item  filter__item--color">
+              <legend>Цвет</legend>
+              <ul class="filter__color  color-filter">
+                <li class="color-filter__item">
+                  <input type="checkbox" class="visually-hidden  color-filter__input" name="black" id="filter-black">
+                  <label for="filter-black">Чёрный</label>
+                </li>
+                <li class="color-filter__item">
+                  <input type="checkbox" class="visually-hidden  color-filter__input" name="white" id="filter-white">
+                  <label for="filter-white">Белый</label>
+                </li>
+                <li class="color-filter__item">
+                  <input type="checkbox" class="visually-hidden  color-filter__input" name="blue" id="filter-blue">
+                  <label for="filter-blue">Синий</label>
+                </li>
+                <li class="color-filter__item">
+                  <input type="checkbox" class="visually-hidden  color-filter__input" name="red" id="filter-red">
+                  <label for="filter-red">Красный</label>
+                </li>
+                <li class="color-filter__item">
+                  <input type="checkbox" class="visually-hidden  color-filter__input" name="pink" id="filter-pink">
+                  <label for="filter-pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter__item  filter__item--bluetooth">
+              <legend>Bluetooth</legend>
+              <ul class="filter__bluetooth  bluetooth-filter">
+                <li>
+                  <input class="visually-hidden  bluetooth-filter__input"
+                         type="radio"
+                         name="bluetooth"
+                         id="bluetooth-yes"
+                         value="1">
+                  <label for="bluetooth-yes">Есть</label>
+                </li>
+                <li>
+                  <input class="visually-hidden  bluetooth-filter__input"
+                         type="radio"
+                         name="bluetooth"
+                         id="bluetooth-no"
+                         value="0">
+                  <label for="bluetooth-no">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" class="filter__button  button">Показать</button>
+          </form>
         </section>
         <section class="mono-pods">
           <h2 class="mono-pods__title  visually-hidden">Список моноподов</h2>
@@ -169,7 +242,7 @@
                   <span>Непотомляемая<br>
                     селфи-палка
                   </span>
-                  <span>2 500 руб.</span>
+                  <span>1 500 руб.</span>
                 </a>
               </p>
             </li>
@@ -187,7 +260,7 @@
                   <span>Селфи-палка &#171;Следуй за<br>
                     мной&#187;
                   </span>
-                  <span>4 900 руб.</span>
+                  <span>1 900 руб.</span>
                 </a>
               </p>
             </li>
