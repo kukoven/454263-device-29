@@ -819,6 +819,8 @@
 }
 
 .promo-slider__controls button {
+  position: relative;
+
   width: 12px;
   height: 12px;
   padding: 0;
@@ -828,10 +830,28 @@
   box-sizing: border-box;
   border-radius: 25px;
   outline: none;
+
+  cursor: pointer;
 }
 
 .promo-slider__controls button:not(:last-child) {
   margin-right: 14px;
+}
+
+.promo-slider__button--current::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid var(--black);
+  border-radius: 50%;
 }
 
 /*Product categories*/
@@ -983,6 +1003,25 @@
   background-color: var(--black);
 }
 
+.services-slider__controls-item {
+  width: 160px;
+}
+
+.services-slider__controls-item--current {
+  width: 100%;
+
+  background-color: var(--black);
+}
+
+.services-slider__controls-item--current .services-slider__button {
+  color: var(--yellow-light);
+}
+
+.services-slider__controls-item--current .services-slider__button::before,
+.services-slider__controls-item--current .services-slider__button:hover::before {
+  background-color: transparent;
+}
+
 .services-slider__button {
   position: relative;
 
@@ -1031,16 +1070,16 @@
   transition: height 0.3s;
 }
 
-.current {
+.services-slider__controls-item:active {
+  width: 100%;
+
+  color: var(--yellow-light);
+
   background-color: var(--black);
 }
 
-.current .services-slider__button {
-  color: var(--yellow-light);
-}
-
-.current .services-slider__button::before,
-.current .services-slider__button:hover::before {
+.services-slider__controls-item:active .services-slider__button::before,
+.services-slider__controls-item:active .services-slider__button:hover::before {
   background-color: transparent;
 }
 
@@ -1067,14 +1106,14 @@
   width: 136px;
   height: 164px;
 
-  background-image: url("../img/delivery 2.svg");
+  background-image: url("../img/delivery-2.svg");
 }
 
 .services-slider__item--2:after {
   width: 171px;
   height: 195px;
 
-  background-image: url("../img/warranty 1.svg");
+  background-image: url("../img/warranty-1.svg");
 }
 
 .services-slider__item--3:after {
@@ -1083,7 +1122,7 @@
   width: 156px;
   height: 188px;
 
-  background-image: url("../img/credit 1.svg");
+  background-image: url("../img/credit-1.svg");
 }
 
 .services-slider__item--1 {
@@ -2265,10 +2304,22 @@
   border: none;
   border-radius: 50%;
   outline: none;
-  background-color: var(--yellow-light);
+  background-color: var(--yellow);
 
   opacity: 0.5;
   cursor: pointer;
+}
+
+.modal__close-button:hover {
+  opacity: 1;
+
+  transition: opacity 0.3s;
+}
+
+.modal__close-button:active {
+  opacity: 0.3;
+
+  transition: opacity 0.3s;
 }
 
 .modal__close-button::before,
@@ -2317,7 +2368,11 @@
   line-height: 19px;
   font-weight: 400;
 
-  color: rgba(0, 0, 0, 0.4)
+  color: var(--dark);
+}
+
+.form-write-us textarea {
+  color: var(--dark);
 }
 
 .form-write-us__wrapper input {
@@ -2328,7 +2383,7 @@
 
   color: inherit;
 
-  border: 0;
+  border: 2px solid transparent;
   outline: none;
 
   background-color: #F2F2F2;
@@ -2358,9 +2413,25 @@
 
   background-color: #F2F2F2;
 
-  border: none;
+  border: 2px solid transparent;
   outline: none;
   resize: none;
+}
+
+.form-write-us textarea:hover,
+.form-write-us input:hover {
+  background-color: #EAEAEA;
+}
+
+.form-write-us textarea:focus,
+.form-write-us input:focus {
+  background-color: var(--white);
+  border: 2px solid var(--yellow-light);
+}
+
+.form-write-us input:invalid,
+.form-write-us textarea:invalid {
+  background-color: var(--pink-light);
 }
 
 .form-write-us__info:only-of-type {
@@ -2385,7 +2456,7 @@
   right: 36px;
 }
 
-.modal-show {
+.modal--show {
   display: block;
 }
 

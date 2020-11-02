@@ -73,7 +73,7 @@
         <h2 class="promo-slider__title  visually-hidden">Промо-слайдер</h2>
         <div class="promo-slider__item  promo-slider__item--1">
           <div class="promo-slider__img">
-            <img src="img/slider-1 1.png"
+            <img src="img/slider-1-1.png"
                  width="384" height="486"
                  alt="Изображение селфи-палки">
           </div>
@@ -100,7 +100,7 @@
         </div>
         <div class="promo-slider__item  promo-slider__item--2">
           <div class="promo-slider__img">
-            <img src="img/slider-2 1.png"
+            <img src="img/slider-2-1.png"
                  width="345" height="483"
                  alt="Изображение фитнес-браслета">
           </div>
@@ -123,7 +123,7 @@
         </div>
         <div class="promo-slider__item  promo-slider__item--3">
           <div class="promo-slider__img">
-            <img src="img/slider-3 1.png"
+            <img src="img/slider-3-1.png"
                  width="526" height="334"
                  alt="Изображение квадрокоптера">
           </div>
@@ -147,9 +147,9 @@
           </table>
         </div>
         <p class="promo-slider__controls">
-          <button type="button" aria-label="Выбор первого слайда"></button>
-          <button type="button" aria-label="Выбор второго слайда"></button>
-          <button type="button" aria-label="Выбор третьего слайда"></button>
+          <button class="promo-slider__button  promo-slider__button--current" type="button" aria-label="Выбор первого слайда"></button>
+          <button class="promo-slider__button" type="button" aria-label="Выбор второго слайда"></button>
+          <button class="promo-slider__button" type="button" aria-label="Выбор третьего слайда"></button>
         </p>
       </section>
       <section class="product-categories  product-categories--margin  container">
@@ -180,7 +180,7 @@
           <h2 class="services-slider__title  visually-hidden">Сервисы</h2>
           <div class="services-slider__wrapper">
             <ul class="services-slider__controls">
-              <li class="services-slider__controls-item  current">
+              <li class="services-slider__controls-item  services-slider__controls-item--current">
                 <button class="services-slider__button" type="button">Доставка</button>
               </li>
               <li class="services-slider__controls-item">
@@ -221,16 +221,16 @@
         <h2 class="contribution__title  visually-hidden">Логотипы</h2>
         <ul class="contribution__list">
           <li class="contribution__item  contribution__item--1">
-            <img src="img/logo-1 1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-1-1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
           <li class="contribution__item  contribution__item--2">
-            <img src="img/logo-2 1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-2-1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
           <li class="contribution__item  contribution__item--3">
-            <img src="img/logo-3 1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-3-1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
           <li class="contribution__item  contribution__item--4">
-            <img src="img/logo-4 1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-4-1.png" width="260" height="100" alt="Логотип компании-партнёра">
           </li>
         </ul>
       </section>
@@ -334,6 +334,7 @@
       </div>
     </footer>
     <section class="modal  modal-write-us">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="modal-write-us__form  form-write-us">
         <div class="form-write-us__wrapper">
           <p class="form-write-us__info">
@@ -354,7 +355,11 @@
       <button class="modal__close-button" aria-label="Закрыть форму обратной связи"></button>
     </section>
     <section class="modal  modal-map">
-      <img class="modal-map__img" src="img/map-big 1.png" width="994" height="593" alt="Улица строителей, 15">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <img class="modal-map__img" src="img/map-big-1.png"
+           width="994"
+           height="593"
+           alt="Офис компании расположен по адресу: Улица строителей, дом 15">
       <button class="modal__close-button" aria-label="Кнопка закрытия карты проезда"></button>
     </section>
   </body>
