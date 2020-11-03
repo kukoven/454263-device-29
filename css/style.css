@@ -1909,6 +1909,7 @@
   display: flex;
   align-items: center;
 
+  width: fit-content;
   height: 39px;
   padding-left: 42px;
 
@@ -1916,6 +1917,8 @@
   font-size: 14px;
   line-height: 19px;
   font-weight: 300;
+
+  cursor: pointer;
 }
 
 .color-filter label::before {
@@ -1962,6 +1965,7 @@
   display: flex;
   align-items: center;
 
+  width: fit-content;
   height: 39px;
   padding: 0 0 0 39px;
 
@@ -1969,6 +1973,8 @@
   font-size: 14px;
   line-height: 19px;
   font-weight: 300;
+
+  cursor: pointer;
 }
 
 .bluetooth-filter label::before {
