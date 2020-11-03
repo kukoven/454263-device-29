@@ -15,17 +15,21 @@
         </a>
         <ul class="main-nav__user-list  user-list">
           <li>
-            <form class="user-list__form">
+            <form class="user-list__form" action="https://echo.htmlacademy.ru" method="get">
               <input id="search-input" class="user-list__search" type="search" placeholder="Поиск по сайту">
               <button class="user-list__search-button" type="button">Найти</button>
-              <label for="search-input" class="user-list__search-label"></label>
+              <label for="search-input"
+                     class="user-list__search-label"
+                     aria-label="Поле ввода для поиска по сайту"></label>
             </form>
           </li>
           <li>
-            <a class="user-list__link  user-list__link--user" href="#">Войти</a>
+            <a class="user-list__link  user-list__link--user" href="#" aria-label="Авторизация на сайте">Войти</a>
           </li>
           <li>
-            <a class="user-list__link  user-list__link--compare" href="#">Сравнить</a>
+            <a class="user-list__link  user-list__link--compare" href="#" aria-label="Сравнение выбранных товаров">
+              Сравнить
+            </a>
           </li>
           <li>
             <a class="user-list__link  user-list__link--cart" href="#">Корзина</a>
@@ -84,11 +88,12 @@
             Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <a class="promo-slider__more  button" href="#">Подробнее</a>
+          <a class="promo-slider__more  button" href="#"
+             aria-label="Более подробная информация о селфи-палке">Подробнее</a>
           <table class="promo-slider__table  promo-slider__table--1">
             <tr>
-              <th>8,5  м</th>
-              <th>5  кг</th>
+              <th>8,5 м</th>
+              <th>5 кг</th>
               <th>Карбон</th>
             </tr>
             <tr>
@@ -111,7 +116,8 @@
             Мотивирующие фитнес-браслеты помогут найти в себе силы
             не пропускать занятия и соблюдать диету.
           </p>
-          <a class="promo-slider__more  button" href="#">Подробнее</a>
+          <a class="promo-slider__more  button" href="#"
+             aria-label="Более подробная информация о фитнес-браслете">Подробнее</a>
           <table class="promo-slider__table  promo-slider__table--2">
             <tr>
               <th>48 часов</th>
@@ -134,7 +140,8 @@
             Этот обычный, на первый взгляд, квадрокоптер оснащен
             мощным лазером, замаскированным под стандартную камеру.
           </p>
-          <a class="promo-slider__more  button" href="#">Подробнее</a>
+          <a class="promo-slider__more  button" href="#"
+             aria-label="Более подробная информация о квадракоптере">Подробнее</a>
           <table class="promo-slider__table  promo-slider__table--2">
             <tr>
               <th>800 метров</th>
@@ -147,9 +154,12 @@
           </table>
         </div>
         <p class="promo-slider__controls">
-          <button class="promo-slider__button  promo-slider__button--current" type="button" aria-label="Выбор первого слайда"></button>
-          <button class="promo-slider__button" type="button" aria-label="Выбор второго слайда"></button>
-          <button class="promo-slider__button" type="button" aria-label="Выбор третьего слайда"></button>
+          <button class="promo-slider__button  promo-slider__button--current" type="button"
+                  aria-label="Кнопека для выбора первого слайда"></button>
+          <button class="promo-slider__button" type="button"
+                  aria-label="Кнопка выбора второго слайда"></button>
+          <button class="promo-slider__button" type="button"
+                  aria-label="Кнопка выбора третьего слайда"></button>
         </p>
       </section>
       <section class="product-categories  product-categories--margin  container">
@@ -221,16 +231,16 @@
         <h2 class="contribution__title  visually-hidden">Логотипы</h2>
         <ul class="contribution__list">
           <li class="contribution__item  contribution__item--1">
-            <img src="img/logo-1-1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-1-1.png" width="260" height="100" alt="Логотип компании &laquo; DJI &raquo;">
           </li>
           <li class="contribution__item  contribution__item--2">
-            <img src="img/logo-2-1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-2-1.png" width="260" height="100" alt="Логотип компании &laquo; SP Gadgets &raquo;">
           </li>
           <li class="contribution__item  contribution__item--3">
-            <img src="img/logo-3-1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-3-1.png" width="260" height="100" alt="Логотип компании &laquo; GoPro &raquo;">
           </li>
           <li class="contribution__item  contribution__item--4">
-            <img src="img/logo-4-1.png" width="260" height="100" alt="Логотип компании-партнёра">
+            <img src="img/logo-4-1.png" width="260" height="100" alt="Логотип компании &laquo; VIVE &raquo;">
           </li>
         </ul>
       </section>
@@ -256,7 +266,8 @@
               <a href="https://www.jde.ru/">ЖелДорЭкспедиция</a>
             </li>
           </ul>
-          <a class="contacts__more button  button--contacts-more" href="#">Подробнее о нас</a>
+          <a class="contacts__more button  button--contacts-more" href="#"
+             aria-label="Более поробная информация о магазине &laquo; DEVICE &raquo;">Подробнее о нас</a>
         </section>
         <section class="contacts">
           <h2 class="contacts__title">Контакты</h2>
@@ -268,7 +279,8 @@
             <img src="img/map 1.jpg" width="560" height="222"
                  alt="Карта с адресом магазина: ул. Строителей, 15">
           </a>
-          <a class="contacts__mail-to  button  button--contacts-mail-to" href="#">Напишите нам</a>
+          <a class="contacts__mail-to  button  button--contacts-mail-to" href="#"
+             aria-label="Форма обратной связи">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -277,7 +289,10 @@
         <section class="find-us">
           <h2 class="find-us__title  visually-hidden">Как нас найти</h2>
           <a class="find-us__logo">
-            <img src="img/logo-footer.svg" width="163" height="35" alt="Логотип инетрнет магазина">
+            <img src="img/logo-footer.svg"
+                 width="163"
+                 height="35"
+                 alt="Логотип инетрнет магазина &laquo; DEVICE &rsaquo;">
           </a>
           <address class="find-us__text" id="contacts">г. Москва, ул. Строителей, 15</address>
         </section>
@@ -314,10 +329,18 @@
           <nav class="footer-nav-user">
             <ul class="footer-nav-user__user-list user-list user-list--opacity-white  user-list--footer">
               <li>
-                <a class="footer-nav-user__link  footer-nav-user__link--sign-in" href="#">Войти</a>
+                <a class="footer-nav-user__link  footer-nav-user__link--sign-in"
+                   href="#"
+                   aria-label="Авторизация">
+                  Войти
+                </a>
               </li>
               <li>
-                <a class="footer-nav-user__link  footer-nav-user__link--compare" href="#">Сравнить</a>
+                <a class="footer-nav-user__link  footer-nav-user__link--compare"
+                   href="#"
+                   aria-label="Сравнить выбранные товары">
+                  Сравнить
+                </a>
               </li>
               <li>
                 <a class="footer-nav-user__link  footer-nav-user__link--cart" href="#">Корзина</a>
@@ -327,7 +350,10 @@
           <p class="footer-contacts">
             <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
             <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
+              <img src="img/logo-html.svg"
+                   width="27"
+                   height="34"
+                   alt="логотип образовательной интернет-платформы HTML Academy">
             </a>
           </p>
         </div>
@@ -352,15 +378,15 @@
         </p>
         <button class="form-write-us__button  button  button--form-write-us">Отправить</button>
       </form>
-      <button class="modal__close-button" aria-label="Закрыть форму обратной связи"></button>
+      <button class="modal__close-button" aria-label="Закрыть форму обратной связи" tabindex="0"></button>
     </section>
-    <section class="modal  modal-map">
+    <section class="modal  modal-map modal--show">
       <h2 class="visually-hidden">Как нас найти</h2>
       <img class="modal-map__img" src="img/map-big-1.png"
            width="994"
            height="593"
            alt="Офис компании расположен по адресу: Улица строителей, дом 15">
-      <button class="modal__close-button" aria-label="Кнопка закрытия карты проезда"></button>
+      <button class="modal__close-button" aria-label="Кнопка закрытия карты проезда" tabindex="0"></button>
     </section>
   </body>
 </html>

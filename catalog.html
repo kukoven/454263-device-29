@@ -18,17 +18,27 @@
           <form class="user-list__form">
             <input id="search-input" class="user-list__search" type="search" placeholder="Поиск по сайту">
             <button class="user-list__search-button" type="button">Найти</button>
-            <label for="search-input" class="user-list__search-label"></label>
+            <label for="search-input"
+                   class="user-list__search-label"
+                   aria-label="Поле ввода для поиска по сайту"></label>
           </form>
         </li>
         <li>
-          <a class="user-list__link  user-list__link--user" href="#">Валентин Петухов</a>
+          <a class="user-list__link  user-list__link--user"
+             href="#"
+             aria-label="Имя пользователя">
+            Валентин Петухов
+          </a>
         </li>
         <li>
-          <a href="#">Выйти</a>
+          <a href="#" aria-label="Деавторизация">Выйти</a>
         </li>
         <li>
-          <a class="user-list__link  user-list__link--compare" href="#">Сравнить</a>
+          <a class="user-list__link  user-list__link--compare"
+             href="#"
+             aria-label="Сравнение выбранных товаров">
+            Сравнить
+          </a>
         </li>
         <li>
           <a class="user-list__link  user-list__link--cart" href="#">Корзина</a>
@@ -95,13 +105,13 @@
               <span>Сортировка:</span>
             </li>
             <li class="sort__item  sort__item--active">
-              <a>По цене</a>
+              <a aria-label="Сортировка по цене">По цене</a>
             </li>
             <li class="sort__item">
-              <a href="#">По типу</a>
+              <a href="#" aria-label="Сортировка по типу">По типу</a>
             </li>
             <li class="sort__item">
-              <a href="#">По популярности</a>
+              <a href="#" aria-label="Сортировка по популярности">По популярности</a>
             </li>
           </ul>
           <p class="sort__buttons">
@@ -115,7 +125,7 @@
       <div class="wrapper-for-catalog-and-filter  container">
         <section class="filter">
           <h2 class="filter__title  visually-hidden">Фильтр</h2>
-          <form class="filter__form" method="post" action="https://echo.htmlacademy.ru">
+          <form class="filter__form" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter__item">
               <legend>Стоимость</legend>
               <div class="filter__range  range-filter">
@@ -187,7 +197,11 @@
                 </li>
               </ul>
             </fieldset>
-            <button type="submit" class="filter__button  button">Показать</button>
+            <button type="submit"
+                    class="filter__button  button"
+                    aria-label="Отобразить найденные товары по заданным параметрам фильтрации">
+              Показать
+            </button>
           </form>
         </section>
         <section class="mono-pods">
@@ -199,11 +213,11 @@
                      alt="Любительская селфи-палка">
               </p>
               <p class="mono-pods__buttons">
-                <button class="button  button--in-cart" type="button">в корзину</button>
+                <button class="button  button--in-cart" type="button">В корзину</button>
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">
+                <a href="#" aria-label="Любительская селфи палка, цена 1 100 рублей">
                   <span>Любительская селфи-палка</span>
                   <span>1 100 руб.</span>
                 </a>
@@ -219,7 +233,7 @@
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">
+                <a href="#" aria-label="Профессиональная селфи-палка, цена 1 500 рублей">
                   <span>
                     Профессиональная<br>
                     селфи-палка
@@ -238,7 +252,7 @@
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">
+                <a href="#" aria-label="Непотопляемая селфи-палка, цена 1 500 рублей">
                   <span>Непотомляемая<br>
                     селфи-палка
                   </span>
@@ -256,7 +270,7 @@
                 <button type="button">Добавить к сравнению</button>
               </p>
               <p class="mono-pods__text">
-                <a href="#">
+                <a href="#" aria-label="Селфи-палка &laquo; Следуй за мной &raquo;, цена 1 900 рублей">
                   <span>Селфи-палка &#171;Следуй за<br>
                     мной&#187;
                   </span>
@@ -267,19 +281,19 @@
           </ul>
         </section>
         <section class="pagination  pagination--margin">
-          <a class="pagination__back-button">Назад</a>
+          <a class="pagination__back-button" aria-label="Переход к предыдущей странице">Назад</a>
           <ul class="pagination__list">
             <li>
-              <a>1</a>
+              <a aria-label="Первая страница">1</a>
             </li>
             <li>
-              <a href="#">2</a>
+              <a href="#" aria-label="Вторая страница">2</a>
             </li>
             <li>
-              <a href="#">3</a>
+              <a href="#" aria-label="Третья страница">3</a>
             </li>
           </ul>
-          <a class="pagination__forward-button" href="#">Вперёд</a>
+          <a class="pagination__forward-button" href="#" aria-label="Переход к следующей странице">Вперёд</a>
         </section>
       </div>
     </div>
@@ -289,7 +303,7 @@
       <section class="find-us  find-us--catalog">
         <h2 class="find-us__title  visually-hidden">Как нас найти</h2>
         <a class="find-us__logo">
-          <img src="img/logo-footer.svg" width="163" height="35" alt="Логотип интернет магазина">
+          <img src="img/logo-footer.svg" width="163" height="35" alt="Логотип интернет магазина &laquo; DEVICE &raquo;">
         </a>
       </section>
       <address class="find-us__text  find-us__text--catalog" id="contacts">г. Москва, ул. Строителей, 15</address>
@@ -326,14 +340,20 @@
         <ul class="footer-nav-user__user-list  user-list  user-list--opacity-white  user-list--footer-catalog">
           <li class="user-list__item-catalog">
             <a class="footer-nav-user__link  footer-nav-user__link--sign-in  footer-nav-user__link--sign-in-inner-page"
-               href="#">Валентин Петухов
+               href="#"
+               aria-label="Имя пользователя">
+              Валентин Петухов
             </a>
           </li>
           <li class="user-list__item-catalog">
-            <a href="#">Выйти</a>
+            <a href="#" aria-label="Деавторизация">Выйти</a>
           </li>
           <li class="user-list__item-catalog">
-            <a class="footer-nav-user__link  footer-nav-user__link--compare" href="#">Сравнить</a>
+            <a class="footer-nav-user__link  footer-nav-user__link--compare"
+               href="#"
+               aria-label="Сравнение выбранных материалов">
+              Сравнить
+            </a>
           </li>
           <li class="user-list__item-catalog">
             <a class="footer-nav-user__link  footer-nav-user__link--cart" href="#">Корзина</a>
@@ -343,7 +363,10 @@
       <p class="footer-contacts  footer-contacts--catalog">
         <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
+          <img src="img/logo-html.svg"
+               width="27"
+               height="34"
+               alt="Логотип образовательной интернет-платформы HTML Academy">
         </a>
       </p>
     </div>
