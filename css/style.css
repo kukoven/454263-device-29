@@ -1761,7 +1761,6 @@
 
 .wrapper-for-catalog-and-filter {
   display: grid;
-  /*grid-template-columns: 323px auto auto;*/
   grid-template-rows: 1fr min-content min-content;
 }
 
