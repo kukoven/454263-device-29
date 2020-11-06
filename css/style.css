@@ -2450,6 +2450,7 @@
   cursor: pointer;
 }
 
+.modal__close-button:focus,
 .modal__close-button:hover {
   opacity: 1;
 
@@ -2460,11 +2461,6 @@
   opacity: 0.3;
 
   transition: opacity 0.3s;
-}
-
-.modal__close-button:focus {
-  border: 2px solid var(--black);
-  border-radius: 50%;
 }
 
 .modal__close-button::before,
@@ -2603,5 +2599,53 @@
 
 .modal--show {
   display: block;
+
+  animation: bounce 0.6s;
 }
 
+.modal--error {
+  animation: shake 0.6s;
+
+}
+
+/*Animations*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
