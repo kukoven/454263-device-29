@@ -561,7 +561,7 @@
 
 .catalog-list {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 
   display: none;
   grid-template-areas:
@@ -1980,10 +1980,7 @@
   cursor: pointer;
 }
 
-.color-filter__input:focus + label::before {
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-}
-
+.color-filter__input:focus + label::before,
 .color-filter__input:hover + label::before {
   opacity: 0.6;
 }
@@ -2026,7 +2023,9 @@
 }
 
 .color-filter__input:checked + label:hover::before,
-.color-filter__input:checked + label:hover::after {
+.color-filter__input:checked + label:hover::after,
+.color-filter__input:checked:focus + label::before,
+.color-filter__input:checked:focus + label::after {
   opacity: 0.6;
 }
 
@@ -2071,10 +2070,6 @@
   border-radius: 50%;
 }
 
-.bluetooth-filter__input:focus + label::before {
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-}
-
 .bluetooth-filter__input:checked + label:after {
   content: "";
 
@@ -2091,7 +2086,9 @@
 }
 
 .bluetooth-filter__input:checked + label:hover::before,
-.bluetooth-filter__input:checked + label:hover::after {
+.bluetooth-filter__input:checked + label:hover::after,
+.bluetooth-filter__input:checked:focus + label::before,
+.bluetooth-filter__input:checked:focus + label::after {
   opacity: 0.6;
 }
 
@@ -2099,6 +2096,7 @@
   background-color: transparent;
 }
 
+.bluetooth-filter__input:focus + label::before,
 .bluetooth-filter__input + label:hover::before {
   opacity: 0.6;
 }
