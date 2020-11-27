@@ -892,6 +892,8 @@
   right: 107px;
   bottom: 152px;
 
+  display: flex;
+
   margin: 0;
 }
 
